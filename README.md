@@ -61,6 +61,9 @@ calcular un ingreso según el año. El programa leía el nombre por teclado sin
 usarlo. En 2026 lo rehíce a partir de esos mismos atributos para que el cálculo
 tuviera sentido, y el año de ingreso terminó definiendo los fondos de reserva.
 
+La segunda parte de esa tarea (sueldo anual, bono por antigüedad e impuesto por
+tramos) está en [java-sueldo-impuestos](https://github.com/Whiteherobot/java-sueldo-impuestos).
+
 ## Autor
 
 Michael Lata ([@Whiteherobot](https://github.com/Whiteherobot)). Licencia MIT.
