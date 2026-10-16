@@ -33,5 +33,9 @@ public class Empleado {
         }
         return (int) retorno;
     }
+
+        public double calcularPago(){
+        return this.horasTrabajadas * this.costoHoras;
+    }
         
 }

@@ -15,15 +15,15 @@ public class Principal {
     public static void main(String[] args) {
 
        var empleado1 = new Empleado();
-       empleado1.nombre= "0";
-       empleado1.horasTrabajadas= 0;
-       empleado1.costoHoras= (0);
-       empleado1.yearincome= 0;
-       System.out.println("Introduzca el nombre del empleado: ");
-       String entradaTeclado="";
        Scanner entradaEscaner=new Scanner(System.in);
-       entradaTeclado = entradaEscaner.nextLine();
-       System.out.println( ( entradaTeclado ));
+       System.out.println("Introduzca el nombre del empleado: ");
+       empleado1.nombre= entradaEscaner.nextLine().trim();
+       System.out.println("Horas trabajadas: ");
+       empleado1.horasTrabajadas= Integer.parseInt(entradaEscaner.nextLine().trim());
+       System.out.println("Costo por hora: ");
+       empleado1.costoHoras= Double.parseDouble(entradaEscaner.nextLine().trim().replace(',', '.'));
+       System.out.println("Año de ingreso: ");
+       empleado1.yearincome= Integer.parseInt(entradaEscaner.nextLine().trim());
        System.out.println(empleado1.nombre+" | "+
                           empleado1.horasTrabajadas+" | "+
                           empleado1.costoHoras+" | "+
@@ -37,7 +37,9 @@ public class Principal {
                           empleado2.horasTrabajadas+" | "+
                           empleado2.costoHoras+" | "+
                           empleado2.yearincome+" | ");
-System.out.println("Usted a trabajado desde "+ empleado1.yearincome+ " por lo tanto su salirio es: "+ empleado1.calcularIngresos());
+System.out.println(empleado2.nombre+" recibe $"+ empleado2.calcularPago()+ " por "+ empleado2.horasTrabajadas+ " horas.");
+System.out.println(empleado1.nombre+" recibe $"+ empleado1.calcularPago()+ " por "+ empleado1.horasTrabajadas+ " horas.");
+System.out.println("Usted ha trabajado desde "+ empleado1.yearincome+ ", por lo tanto su ingreso adicional es: $"+ empleado1.calcularIngresos());
        
     }
     
